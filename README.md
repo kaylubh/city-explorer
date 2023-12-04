@@ -19,3 +19,37 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+## Features Time Estimates
+
+***All times are Eastern Time***
+
+### Lab 06
+
+1. #### Setup
+
+    Estimate of time needed to complete: 30 mins
+    Start time: 4:32pm
+    Finish time: 5:16pm
+    Actual time needed to complete: 44 mins
+
+2. #### Locations
+
+    Estimate of time needed to complete: 45 mins
+    Start time:
+    Finish time:
+    Actual time needed to complete:
+
+3. #### Map
+
+    Estimate of time needed to complete: 1 hour
+    Start time:
+    Finish time:
+    Actual time needed to complete:
+
+4. #### Errors
+
+    Estimate of time needed to complete: 45 mins
+    Start time:
+    Finish time:
+    Actual time needed to complete:
