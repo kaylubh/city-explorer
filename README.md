@@ -36,7 +36,7 @@
 2. #### Locations
 
     Estimate of time needed to complete: 45 mins
-    Start time:
+    Start time: 5:35pm
     Finish time:
     Actual time needed to complete:
 
