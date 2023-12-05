@@ -1,8 +1,6 @@
 // css
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// axios
-import axios from 'axios';
 // react
 import { useState } from 'react';
 // bootstrap
@@ -19,29 +17,8 @@ const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
 
 function App() {
 
-  const [location, setLocation] = useState({});
-  const [mapImage, setMapImage] = useState();
-  const [showError, setShowError] = useState(false);
+  const [city, setCity] = useState({});
   const [errorMessage, setErrorMessage] = useState({});
-
-  async function getCityData(cityName) {
-    try {
-      const API_request = `https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=${cityName}&format=json`;
-      const response = await axios.get(API_request);
-      const locationObj = response.data[0];
-      setLocation(locationObj);
-      getMapImage(locationObj);
-    } catch (error) {
-      setErrorMessage(error);
-      setShowError(true);
-    }
-  }
-
-  async function getMapImage(locationObj) {
-    const API_request = `https://maps.locationiq.com/v3/staticmap?key=${LOC_API_KEY}&center=${locationObj.lat},${locationObj.lon}&zoom=12`
-    const response = await axios.get(API_request);
-    setMapImage(response.config.url);
-  }
 
   return (
     <Container>
@@ -49,15 +26,15 @@ function App() {
 
         <Stack gap={3}>
 
-          <CityInput onExplore={getCityData} />
+          <CityInput onExplore={setCity} onError={setErrorMessage} API_KEY={LOC_API_KEY} />
 
-          <LocationInfo location={location} />
+          <LocationInfo location={city} />
 
-          <ErrorAlert show={showError} errorMessage={errorMessage} />
+          <ErrorAlert errorMessage={errorMessage} />
 
         </Stack>
 
-        <CityMap source={mapImage} location={location} />
+        <CityMap location={city} API_KEY={LOC_API_KEY} />
 
       </Stack>
     </Container>
