@@ -58,3 +58,9 @@
     Start time: 9:18pm
     Finish time: 10:04pm
     Actual time needed to complete: 46 mins
+
+## Lighthouse Reports
+
+### Lab 6
+
+![Lighthouse report, score: 100](/lighthouse/lab6.png)
