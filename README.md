@@ -17,6 +17,11 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
+12-04-2023 5:16pm - Application is deployed
+12-04-2023 7:00pm - Displays a city name and latitude/longitude coordinates when searched
+12-04-2023 9:08pm - Displays a static map image of the searched city
+12-04-2023 10:04pm - Displays an error message if API request returns an error
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
