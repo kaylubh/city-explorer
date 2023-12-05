@@ -23,7 +23,7 @@ function CityInput(props) {
       </Form.Text>
       
     </Form>
-  );
+  )
 }
 
 export default CityInput;

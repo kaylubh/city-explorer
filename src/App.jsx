@@ -9,6 +9,7 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 // components
 import CityInput from './components/CityInput';
+import LocationInfo from './components/LocationInfo';
 
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
@@ -30,8 +31,10 @@ function App() {
     
       <CityInput onExplore={getLatLong} />
 
+      <LocationInfo location={location} />
+
     </Container>
   )
 }
 
-export default App
+export default App;
