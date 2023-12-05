@@ -1,11 +1,12 @@
-// react
-import { useState } from 'react';
 // bootstrap
 import Alert from 'react-bootstrap/Alert';
 
 function ErrorAlert(props) {
+
+  const show = Object.keys(props.errorMessage).length > 0
+
   return (
-    <Alert show={props.show} variant='danger'>
+    <Alert show={show} variant='danger'>
       <Alert.Heading>Error</Alert.Heading>
       <hr />
       <p>{props.errorMessage.code}</p>

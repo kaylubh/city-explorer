@@ -11,12 +11,18 @@ function CityInput(props) {
   const [cities, setCities] = useState({});
 
   async function getCityData() {
+    
     const cityNameInput = document.getElementById('inputCityName').value;
 
+    try {
       const API_request = `https://us1.locationiq.com/v1/search.php?key=${props.API_KEY}&q=${cityNameInput}&format=json`;
       const response = await axios.get(API_request);
       setCities(response.data);
       props.onExplore(response.data[0]);
+      props.onError({});
+    } catch (error) {
+      props.onError(error);
+    }
   }
 
   return (

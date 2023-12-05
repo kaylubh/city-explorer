@@ -20,7 +20,8 @@
 ### 0.1.1
 
 12-04-2023 2:40pm - Refactor component which displays static map image of city
-12-04-2023 4:23pm - Refactor CityInput component which handle user input of city to explore
+12-04-2023 4:23pm - Refactor CityInput component which handles user input of city to explore
+12-04-2023 4:43pm - Refactor ErrorAlert component which alerts user of a bad search request
 
 ### 0.1.0
 

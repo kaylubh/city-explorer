@@ -10,7 +10,7 @@ import Stack from 'react-bootstrap/Stack';
 import CityInput from './components/CityInput';
 import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
-// import ErrorAlert from './components/ErrorAlert';
+import ErrorAlert from './components/ErrorAlert';
 
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
@@ -19,18 +19,6 @@ function App() {
 
   const [city, setCity] = useState({});
   const [errorMessage, setErrorMessage] = useState({});
-
-  // async function getCityData(cityName) {
-  //   try {
-  //     const API_request = `https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=${cityName}&format=json`;
-  //     const response = await axios.get(API_request);
-  //     const locationObj = response.data[0];
-  //     setCity(locationObj);
-  //   } catch (error) {
-  //     setErrorMessage(error);
-  //     setShowError(true);
-  //   }
-  // }
 
   return (
     <Container>
@@ -42,7 +30,7 @@ function App() {
 
           <LocationInfo location={city} />
 
-          {/* <ErrorAlert show={showError} errorMessage={errorMessage} /> */}
+          <ErrorAlert errorMessage={errorMessage} />
 
         </Stack>
 
