@@ -44,12 +44,12 @@
 
     Estimate of time needed to complete: 1 hour
     Start time: 8:00pm
-    Finish time:
-    Actual time needed to complete:
+    Finish time: 9:08pm
+    Actual time needed to complete: 1 hours 8 mins
 
 4. #### Errors
 
     Estimate of time needed to complete: 45 mins
-    Start time:
+    Start time: 9:18pm
     Finish time:
     Actual time needed to complete:

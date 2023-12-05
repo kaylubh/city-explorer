@@ -12,6 +12,7 @@ import Stack from 'react-bootstrap/Stack';
 import CityInput from './components/CityInput';
 import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
+import ErrorAlert from './components/ErrorAlert';
 
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
@@ -20,6 +21,7 @@ function App() {
 
   const [location, setLocation] = useState({});
   const [mapImage, setMapImage] = useState();
+  const [showError, setShowError] = useState(true);
 
   async function getCityData(cityName) {
     const API_request = `https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=${cityName}&format=json`;
@@ -44,6 +46,8 @@ function App() {
           <CityInput onExplore={getCityData} />
 
           <LocationInfo location={location} />
+
+          <ErrorAlert show={showError} />
 
         </Stack>
 
