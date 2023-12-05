@@ -7,6 +7,7 @@ import axios from 'axios';
 import { useState } from 'react';
 // bootstrap
 import Container from 'react-bootstrap/Container';
+import Stack from 'react-bootstrap/Stack';
 // components
 import CityInput from './components/CityInput';
 import LocationInfo from './components/LocationInfo';
@@ -36,13 +37,19 @@ function App() {
 
   return (
     <Container>
-    
-      <CityInput onExplore={getCityData} />
+      <Stack gap={3} direction='horizontal'>
 
-      <LocationInfo location={location} />
+        <Stack gap={3}>
 
-      <CityMap source={mapImage} />
+          <CityInput onExplore={getCityData} />
 
+          <LocationInfo location={location} />
+
+        </Stack>
+
+        <CityMap source={mapImage} />
+
+      </Stack>
     </Container>
   )
 }

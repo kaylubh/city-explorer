@@ -10,8 +10,8 @@ function LocationInfo(props) {
       </Alert.Heading>
       <hr />
       <ListGroup>
-        <ListGroup.Item>Latitude: {props.location.lat}</ListGroup.Item>
-        <ListGroup.Item>Longitude: {props.location.lon}</ListGroup.Item>
+        <ListGroup.Item variant='secondary'>Latitude: {props.location.lat}</ListGroup.Item>
+        <ListGroup.Item variant='secondary'>Longitude: {props.location.lon}</ListGroup.Item>
       </ListGroup>
     </Alert>
   )
