@@ -57,7 +57,7 @@ function App() {
 
         </Stack>
 
-        <CityMap source={mapImage} />
+        <CityMap source={mapImage} location={location} />
 
       </Stack>
     </Container>
