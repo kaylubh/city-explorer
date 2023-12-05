@@ -21,14 +21,20 @@ function App() {
 
   const [location, setLocation] = useState({});
   const [mapImage, setMapImage] = useState();
-  const [showError, setShowError] = useState(true);
+  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState({});
 
   async function getCityData(cityName) {
-    const API_request = `https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=${cityName}&format=json`;
-    const response = await axios.get(API_request);
-    const locationObj = response.data[0];
-    setLocation(locationObj);
-    getMapImage(locationObj);
+    try {
+      const API_request = `https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=${cityName}&format=json`;
+      const response = await axios.get(API_request);
+      const locationObj = response.data[0];
+      setLocation(locationObj);
+      getMapImage(locationObj);
+    } catch (error) {
+      setErrorMessage(error);
+      setShowError(true);
+    }
   }
 
   async function getMapImage(locationObj) {
@@ -47,7 +53,7 @@ function App() {
 
           <LocationInfo location={location} />
 
-          <ErrorAlert show={showError} />
+          <ErrorAlert show={showError} errorMessage={errorMessage} />
 
         </Stack>
 
