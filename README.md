@@ -37,13 +37,13 @@
 
     Estimate of time needed to complete: 45 mins
     Start time: 5:35pm
-    Finish time:
-    Actual time needed to complete:
+    Finish time: 7:00pm
+    Actual time needed to complete: 1 hour 10 mins (-15 mins break)
 
 3. #### Map
 
     Estimate of time needed to complete: 1 hour
-    Start time:
+    Start time: 8:00pm
     Finish time:
     Actual time needed to complete:
 
