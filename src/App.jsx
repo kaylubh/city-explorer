@@ -19,7 +19,6 @@ import Weather from './components/Weather';
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
 // placeholder city
 const placeholder = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=Seattle&format=json`);
-console.log(placeholder);
 
 function App() {
 

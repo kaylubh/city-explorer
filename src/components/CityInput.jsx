@@ -1,5 +1,5 @@
 // react
-import { useState } from 'react';
+// import { useState } from 'react';
 // axios
 import axios from 'axios';
 // bootstrap
@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 function CityInput(props) {
 
-  const [cities, setCities] = useState({});
+  // const [cities, setCities] = useState({});
 
   async function getCityData() {
     
@@ -17,7 +17,7 @@ function CityInput(props) {
     try {
       const API_request = `https://us1.locationiq.com/v1/search.php?key=${props.API_KEY}&q=${cityNameInput}&format=json`;
       const response = await axios.get(API_request);
-      setCities(response.data);
+      // setCities(response.data);
       props.onExplore(response.data[0]);
       props.onError({});
     } catch (error) {

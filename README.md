@@ -17,6 +17,11 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
+### 0.2.0
+
+12-04-2023 8:30pm - Create Weather component to display city weather
+12-04-2023 9:20pm - Add placeholder city data
+
 ### 0.1.1
 
 12-04-2023 2:40pm - Refactor component which displays static map image of city
@@ -72,7 +77,7 @@
 1. #### Weather
 
     Estimate of time needed to complete: 30 mins
-    Start time:
+    Start time: 8:00pm
     Finish time:
     Actual time needed to complete:
 
