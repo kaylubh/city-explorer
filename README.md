@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Caleb Hemphill
-**Version**: 0.1.1
+**Version**: 0.2.1
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -17,17 +17,22 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-### 0.2.0
+### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
-12-04-2023 8:30pm - Create Weather component to display city weather
+12-06-2023 4:50pm - Request weather data and display it to the user when user selects explore
+12-06-2023 5:37pm - Display an error if weather data isn't available for the requested city
 
-### 0.1.1
+### [0.2.0](https://github.com/kaylubh/city-explorer/pull/3)
 
-12-04-2023 2:40pm - Refactor component which displays static map image of city
-12-04-2023 4:23pm - Refactor CityInput component which handles user input of city to explore
-12-04-2023 4:43pm - Refactor ErrorAlert component which alerts user of a bad search request
+12-05-2023 8:30pm - Create Weather component to display city weather
 
-### 0.1.0
+### [0.1.1](https://github.com/kaylubh/city-explorer/pull/2)
+
+12-05-2023 2:40pm - Refactor component which displays static map image of city
+12-05-2023 4:23pm - Refactor CityInput component which handles user input of city to explore
+12-05-2023 4:43pm - Refactor ErrorAlert component which alerts user of a bad search request
+
+### [0.1.0](https://github.com/kaylubh/city-explorer/pull/1)
 
 12-04-2023 5:16pm - Application is deployed
 12-04-2023 7:00pm - Displays a city name and latitude/longitude coordinates when searched
@@ -76,19 +81,23 @@
 1. #### Weather
 
     Estimate of time needed to complete: 30 mins
-    Start time: 8:00pm
-    Finish time:
-    Actual time needed to complete:
+    Start time: 4:08pm
+    Finish time: 4:50pm
+    Actual time needed to complete: 42 mins
 
 2. #### Weather Errors
 
     Estimate of time needed to complete: 30 mins
-    Start time:
-    Finish time:
-    Actual time needed to complete:
+    Start time: 5:20pm
+    Finish time: 5:37pm
+    Actual time needed to complete: 17 mins
 
 ## Lighthouse Reports
 
 ### Lab 6
 
 ![Lighthouse report, score: 100](/lighthouse/lab6.png)
+
+### Lab 7
+
+![Lighthouse report, score: 100](/lighthouse/lab7.png)

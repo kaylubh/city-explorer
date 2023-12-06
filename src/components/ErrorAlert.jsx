@@ -3,7 +3,7 @@ import Alert from 'react-bootstrap/Alert';
 
 function ErrorAlert(props) {
 
-  const show = Object.keys(props.errorMessage).length > 0
+  const show = Object.keys(props.errorMessage).length > 0;
 
   return (
     <Alert show={show} variant='danger'>
