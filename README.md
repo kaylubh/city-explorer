@@ -20,7 +20,6 @@
 ### 0.2.0
 
 12-04-2023 8:30pm - Create Weather component to display city weather
-12-04-2023 9:20pm - Add placeholder city data
 
 ### 0.1.1
 

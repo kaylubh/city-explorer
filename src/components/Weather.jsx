@@ -2,15 +2,11 @@
 import Stack from 'react-bootstrap/Stack';
 import Accordion from 'react-bootstrap/Accordion';
 
-function Weather(props) {
-
-  const locationName = props.location.display_name;
-  const cityName = locationName.split(',')[0];
-
+function Weather() {
 
   return (
     <Stack>
-      <h3>{cityName} Weather</h3>
+      <h3>Weather</h3>
       <Accordion>
 
       </Accordion>

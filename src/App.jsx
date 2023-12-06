@@ -3,8 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // react
 import { useState } from 'react';
-// axios
-import axios from 'axios';
 // bootstrap
 import Container from 'react-bootstrap/Container';
 import Stack from 'react-bootstrap/Stack';
@@ -18,11 +16,10 @@ import Weather from './components/Weather';
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
 // placeholder city
-const placeholder = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${LOC_API_KEY}&q=Seattle&format=json`);
 
 function App() {
 
-  const [city, setCity] = useState(placeholder.data[0]);
+  const [city, setCity] = useState({});
   const [errorMessage, setErrorMessage] = useState({});
 
   return (
