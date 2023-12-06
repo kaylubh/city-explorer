@@ -17,7 +17,7 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-### 0.2.1
+### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
 
 
@@ -80,7 +80,7 @@
 1. #### Weather
 
     Estimate of time needed to complete: 30 mins
-    Start time: 8:00pm
+    Start time: 4:08pm
     Finish time:
     Actual time needed to complete:
 
