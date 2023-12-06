@@ -11,6 +11,7 @@ import CityInput from './components/CityInput';
 import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
 import ErrorAlert from './components/ErrorAlert';
+import Weather from './components/Weather';
 
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <Container>
+
       <Stack gap={3} direction='horizontal'>
 
         <Stack gap={3}>
@@ -37,6 +39,9 @@ function App() {
         <CityMap location={city} API_KEY={LOC_API_KEY} />
 
       </Stack>
+
+      <Weather location={city} />
+
     </Container>
   )
 }
