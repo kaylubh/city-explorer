@@ -17,6 +17,10 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
+### 0.2.0
+
+12-04-2023 8:30pm - Create Weather component to display city weather
+
 ### 0.1.1
 
 12-04-2023 2:40pm - Refactor component which displays static map image of city
@@ -66,6 +70,22 @@
     Start time: 9:18pm
     Finish time: 10:04pm
     Actual time needed to complete: 46 mins
+
+### Lab 07
+
+1. #### Weather
+
+    Estimate of time needed to complete: 30 mins
+    Start time: 8:00pm
+    Finish time:
+    Actual time needed to complete:
+
+2. #### Weather Errors
+
+    Estimate of time needed to complete: 30 mins
+    Start time:
+    Finish time:
+    Actual time needed to complete:
 
 ## Lighthouse Reports
 
