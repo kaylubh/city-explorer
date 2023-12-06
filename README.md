@@ -23,13 +23,14 @@
 
 ### [0.2.0](https://github.com/kaylubh/city-explorer/pull/3)
 
-12-04-2023 8:30pm - Create Weather component to display city weather
+12-05-2023 8:30pm - Create Weather component to display city weather
+12-06-2023 8:30pm - Request weather data and display it to the user when user selects explore
 
 ### [0.1.1](https://github.com/kaylubh/city-explorer/pull/2)
 
-12-04-2023 2:40pm - Refactor component which displays static map image of city
-12-04-2023 4:23pm - Refactor CityInput component which handles user input of city to explore
-12-04-2023 4:43pm - Refactor ErrorAlert component which alerts user of a bad search request
+12-05-2023 2:40pm - Refactor component which displays static map image of city
+12-05-2023 4:23pm - Refactor CityInput component which handles user input of city to explore
+12-05-2023 4:43pm - Refactor ErrorAlert component which alerts user of a bad search request
 
 ### [0.1.0](https://github.com/kaylubh/city-explorer/pull/1)
 
@@ -81,8 +82,8 @@
 
     Estimate of time needed to complete: 30 mins
     Start time: 4:08pm
-    Finish time:
-    Actual time needed to complete:
+    Finish time: 4:50pm
+    Actual time needed to complete: 42 mins
 
 2. #### Weather Errors
 
