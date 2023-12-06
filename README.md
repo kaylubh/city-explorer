@@ -97,3 +97,7 @@
 ### Lab 6
 
 ![Lighthouse report, score: 100](/lighthouse/lab6.png)
+
+### Lab 7
+
+![Lighthouse report, score: 100](/lighthouse/lab7.png)
