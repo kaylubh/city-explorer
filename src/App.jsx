@@ -23,20 +23,24 @@ const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
 function App() {
 
   const [city, setCity] = useState({});
+  const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
   const [cityWeather, setCityWeather] = useState([]);
 
   function exploreCity(selectedCity) {
+
     setCity(selectedCity);
-    fetchWeather(selectedCity);
+
+    const displayName = selectedCity.display_name;
+    const shortName = displayName.split(',')[0];
+    setCityName(shortName);
+      
+    fetchWeather(selectedCity, shortName);
   }
 
-  async function fetchWeather(selectedCity) {
-    const displayName = selectedCity.display_name;
-    const cityName = displayName.split(',')[0];
-
+  async function fetchWeather(selectedCity, shortName) {
     const API = 'http://localhost:3001';
-    const response = await axios.get(`${API}/weather?searchQuery=${cityName}&lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
+    const response = await axios.get(`${API}/weather?searchQuery=${shortName}&lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
     setCityWeather(response.data);
   }
 
@@ -59,7 +63,7 @@ function App() {
 
       </Stack>
 
-      <Weather location={city} weatherData={cityWeather} />
+      <Weather location={city} cityName={cityName} weatherData={cityWeather} />
 
     </Container>
   )
