@@ -67,6 +67,22 @@
     Finish time: 10:04pm
     Actual time needed to complete: 46 mins
 
+### Lab 07
+
+1. #### Weather
+
+    Estimate of time needed to complete: 30 mins
+    Start time:
+    Finish time:
+    Actual time needed to complete:
+
+2. #### Weather Errors
+
+    Estimate of time needed to complete: 30 mins
+    Start time:
+    Finish time:
+    Actual time needed to complete:
+
 ## Lighthouse Reports
 
 ### Lab 6
