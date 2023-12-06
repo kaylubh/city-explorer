@@ -19,12 +19,12 @@
 
 ### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
-
+12-06-2023 4:50pm - Request weather data and display it to the user when user selects explore
+12-06-2023 5:37pm - Display an error if weather data isn't available for the requested city
 
 ### [0.2.0](https://github.com/kaylubh/city-explorer/pull/3)
 
 12-05-2023 8:30pm - Create Weather component to display city weather
-12-06-2023 8:30pm - Request weather data and display it to the user when user selects explore
 
 ### [0.1.1](https://github.com/kaylubh/city-explorer/pull/2)
 
@@ -88,9 +88,9 @@
 2. #### Weather Errors
 
     Estimate of time needed to complete: 30 mins
-    Start time:
-    Finish time:
-    Actual time needed to complete:
+    Start time: 5:20pm
+    Finish time: 5:37pm
+    Actual time needed to complete: 17 mins
 
 ## Lighthouse Reports
 

@@ -1,6 +1,7 @@
 // bootstrap
 import Stack from 'react-bootstrap/Stack';
 import Accordion from 'react-bootstrap/Accordion';
+import Alert from 'react-bootstrap/Alert';
 
 
 function Weather(props) {
@@ -16,6 +17,11 @@ function Weather(props) {
           </Accordion.Item>
         )}
       </Accordion>
+      <Alert show={props.showError} variant='warning'>
+        <Alert.Heading>Error</Alert.Heading>
+        <hr />
+        <p>No weather data available for this city</p>
+      </Alert>
     </Stack>
   );
 }
