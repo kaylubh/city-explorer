@@ -20,6 +20,8 @@
 ### 0.3.0
 
 12-06-2023 9:11pm - Refactor weather API request to handle live data
+12-06-2023 10:03pm - Refactor weather component to display live data
+12-06-2023 11:21pm - Add movies API request handler
 
 ### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
@@ -101,7 +103,7 @@
 1. #### City Movies
 
     Estimate of time needed to complete: 45 mins
-    Start time:
+    Start time: 11:06pm
     Finish time:
     Actual time needed to complete:
 

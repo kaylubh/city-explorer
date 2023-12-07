@@ -24,6 +24,7 @@ function App() {
   const [errorMessage, setErrorMessage] = useState({});
   const [cityWeather, setCityWeather] = useState({});
   const [weatherError, setWeatherError] = useState(false);
+  const [movies, setMovies] = useState([]);
 
   function exploreCity(selectedCity) {
 
@@ -33,18 +34,30 @@ function App() {
     const shortName = displayName.split(',')[0];
     setCityName(shortName);
 
-    fetchWeather(selectedCity);
+    getWeather(selectedCity);
+    getMovies(shortName);
   }
 
-  async function fetchWeather(selectedCity) {
+  async function getWeather(query) {
     try {
-      const API = 'http://localhost:3001';
-      const response = await axios.get(`${API}/weather?lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
+      const url = `http://localhost:3001/weather?lat=${query.lat}&lon=${query.lon}`;
+      const response = await axios.get(url)
       setCityWeather(response.data[0]);
       setWeatherError(false);
     } catch (error) {
       setWeatherError(true);
-      setCityWeather([]);
+      setCityWeather({});
+    }
+  }
+
+  async function getMovies(query) {
+    try {
+      const url = `http://localhost:3001/movies?cityName=${query}`;
+      const response = await axios.get(url);
+      setMovies(response.data);
+    } catch (error) {
+      console.log(error);
+      setMovies([]);
     }
   }
 
@@ -68,6 +81,8 @@ function App() {
       </Stack>
 
       <Weather location={city} cityName={cityName} weatherData={cityWeather} showError={weatherError} />
+
+
 
     </Container>
   )
