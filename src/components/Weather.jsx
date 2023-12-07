@@ -13,11 +13,11 @@ function Weather(props) {
         <Card.Body>
           <Card.Title>{props.weatherData.description}</Card.Title>
           <ListGroup>
-            <ListGroup.Item>Temperature: {Math.round((props.weatherData.temp * (9 / 5)) + 32)}&deg;F</ListGroup.Item>
-            <ListGroup.Item>Feels Like: {Math.round((props.weatherData.feelsTemp * (9 / 5)) + 32)}&deg;F</ListGroup.Item>
+            <ListGroup.Item>Temperature: {props.weatherData.temp}&deg;F</ListGroup.Item>
+            <ListGroup.Item>Feels Like: {props.weatherData.feelsTemp}&deg;F</ListGroup.Item>
             <ListGroup.Item>Humidity: {props.weatherData.humidity}%</ListGroup.Item>
             <ListGroup.Item>Cloud Coverage: {props.weatherData.cloudCoverage}%</ListGroup.Item>
-            <ListGroup.Item>Rain: {(props.weatherData.rain)}</ListGroup.Item>
+            <ListGroup.Item>Rain: {(props.weatherData.rain)}in/hr</ListGroup.Item>
           </ListGroup>
         </Card.Body>
       </Card>
@@ -27,7 +27,6 @@ function Weather(props) {
         <p>No weather data available for this city</p>
       </Alert>
     </>
-
   );
 }
 

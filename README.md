@@ -116,7 +116,7 @@
 1. #### Componentize
 
     Estimate of time needed to complete: 1 hour
-    Start time:
+    Start time: 6:13pm
     Finish time:
     Actual time needed to complete:
 
