@@ -15,8 +15,9 @@ import CityMap from './components/CityMap';
 import ErrorAlert from './components/ErrorAlert';
 import Weather from './components/Weather';
 import Movies from './components/Movies';
-// API keys
+// API data
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
 
   async function getWeather(query) {
     try {
-      const url = `http://localhost:3001/weather?lat=${query.lat}&lon=${query.lon}`;
+      const url = `${API_URL}/weather?lat=${query.lat}&lon=${query.lon}`;
       const response = await axios.get(url)
       setCityWeather(response.data[0]);
       setWeatherError(false);
@@ -53,7 +54,7 @@ function App() {
 
   async function getMovies(query) {
     try {
-      const url = `http://localhost:3001/movies?cityName=${query}`;
+      const url = `${API_URL}/movies?cityName=${query}`;
       const response = await axios.get(url);
       setMovies(response.data);
     } catch (error) {
