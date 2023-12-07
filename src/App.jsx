@@ -14,11 +14,8 @@ import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
 import ErrorAlert from './components/ErrorAlert';
 import Weather from './components/Weather';
-
-
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
-// placeholder city
 
 function App() {
 
@@ -36,13 +33,13 @@ function App() {
     const shortName = displayName.split(',')[0];
     setCityName(shortName);
 
-    fetchWeather(selectedCity, shortName);
+    fetchWeather(selectedCity);
   }
 
-  async function fetchWeather(selectedCity, shortName) {
+  async function fetchWeather(selectedCity) {
     try {
       const API = 'http://localhost:3001';
-      const response = await axios.get(`${API}/weather?searchQuery=${shortName}&lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
+      const response = await axios.get(`${API}/weather?lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
       setCityWeather(response.data);
       setWeatherError(false);
     } catch (error) {
