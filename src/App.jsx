@@ -14,6 +14,7 @@ import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
 import ErrorAlert from './components/ErrorAlert';
 import Weather from './components/Weather';
+import Movies from './components/Movies';
 // API keys
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
 
@@ -82,7 +83,7 @@ function App() {
 
       <Weather location={city} cityName={cityName} weatherData={cityWeather} showError={weatherError} />
 
-
+      <Movies moviesData={movies} cityName={cityName} />
 
     </Container>
   )
