@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Caleb Hemphill
-**Version**: 0.2.1
+**Version**: 0.3.0
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -16,6 +16,8 @@
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+
+### 0.3.0
 
 ### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
@@ -91,6 +93,15 @@
     Start time: 5:20pm
     Finish time: 5:37pm
     Actual time needed to complete: 17 mins
+
+### Lab 08
+
+1. #### City Movies
+
+    Estimate of time needed to complete: 45 mins
+    Start time:
+    Finish time:
+    Actual time needed to complete:
 
 ## Lighthouse Reports
 
