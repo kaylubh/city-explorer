@@ -23,6 +23,7 @@
 12-06-2023 10:03pm - Refactor weather component to display live data
 12-06-2023 11:21pm - Add movies API request handler
 12-06-2023 11:49pm - Create Movies component to display related movies
+12-07-2023 12:30am - Configure API request to work with remote server
 
 ### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
@@ -117,3 +118,7 @@
 ### Lab 7
 
 ![Lighthouse report, score: 100](/lighthouse/lab7.png)
+
+### Lab 8
+
+![Lighthouse report, score: 100](/lighthouse/lab8.png)
