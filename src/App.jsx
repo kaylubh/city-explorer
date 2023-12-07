@@ -14,19 +14,19 @@ import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
 import ErrorAlert from './components/ErrorAlert';
 import Weather from './components/Weather';
-
-
-// API keys
+import Movies from './components/Movies';
+// API data
 const LOC_API_KEY = import.meta.env.VITE_LOC_API_KEY;
-// placeholder city
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
 
   const [city, setCity] = useState({});
   const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
-  const [cityWeather, setCityWeather] = useState([]);
+  const [cityWeather, setCityWeather] = useState({});
   const [weatherError, setWeatherError] = useState(false);
+  const [movies, setMovies] = useState([]);
 
   function exploreCity(selectedCity) {
 
@@ -36,18 +36,30 @@ function App() {
     const shortName = displayName.split(',')[0];
     setCityName(shortName);
 
-    fetchWeather(selectedCity, shortName);
+    getWeather(selectedCity);
+    getMovies(shortName);
   }
 
-  async function fetchWeather(selectedCity, shortName) {
+  async function getWeather(query) {
     try {
-      const API = 'http://localhost:3001';
-      const response = await axios.get(`${API}/weather?searchQuery=${shortName}&lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
-      setCityWeather(response.data);
+      const url = `${API_URL}/weather?lat=${query.lat}&lon=${query.lon}`;
+      const response = await axios.get(url)
+      setCityWeather(response.data[0]);
       setWeatherError(false);
     } catch (error) {
       setWeatherError(true);
-      setCityWeather([]);
+      setCityWeather({});
+    }
+  }
+
+  async function getMovies(query) {
+    try {
+      const url = `${API_URL}/movies?cityName=${query}`;
+      const response = await axios.get(url);
+      setMovies(response.data);
+    } catch (error) {
+      console.log(error);
+      setMovies([]);
     }
   }
 
@@ -71,6 +83,8 @@ function App() {
       </Stack>
 
       <Weather location={city} cityName={cityName} weatherData={cityWeather} showError={weatherError} />
+
+      <Movies moviesData={movies} cityName={cityName} />
 
     </Container>
   )
