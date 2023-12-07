@@ -17,7 +17,7 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-### 0.3.0
+### [0.3.0](https://github.com/kaylubh/city-explorer/pull/5)
 
 12-06-2023 9:11pm - Refactor weather API request to handle live data
 12-06-2023 10:03pm - Refactor weather component to display live data
