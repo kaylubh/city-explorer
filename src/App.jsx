@@ -22,7 +22,7 @@ function App() {
   const [city, setCity] = useState({});
   const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
-  const [cityWeather, setCityWeather] = useState([]);
+  const [cityWeather, setCityWeather] = useState({});
   const [weatherError, setWeatherError] = useState(false);
 
   function exploreCity(selectedCity) {
@@ -40,7 +40,7 @@ function App() {
     try {
       const API = 'http://localhost:3001';
       const response = await axios.get(`${API}/weather?lat=${selectedCity.lat}&lon=${selectedCity.lon}`)
-      setCityWeather(response.data);
+      setCityWeather(response.data[0]);
       setWeatherError(false);
     } catch (error) {
       setWeatherError(true);

@@ -19,6 +19,8 @@
 
 ### 0.3.0
 
+12-06-2023 9:11pm - Refactor weather API request to handle live data
+
 ### [0.2.1](https://github.com/kaylubh/city-explorer/pull/4)
 
 12-06-2023 4:50pm - Request weather data and display it to the user when user selects explore
