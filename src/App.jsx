@@ -12,6 +12,7 @@ import Stack from 'react-bootstrap/Stack';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CityInput from './components/CityInput';
+import ServerStatus from './components/ServerStatus';
 import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
 import ErrorAlert from './components/ErrorAlert';
@@ -23,6 +24,8 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
 
+  const [loading, setLoading] = useState(true);
+  const [exploreServerError, setExploreServerError] = useState(false);
   const [city, setCity] = useState({});
   const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
@@ -31,16 +34,19 @@ function App() {
   const [movies, setMovies] = useState();
 
   useEffect(() => {
-    async function ping() {
-      try {
-        const response = await axios.get(`${API_URL}/ping`);
-        console.log(response);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    ping();
+    exploreServerStatus();
   }, []);
+
+  async function exploreServerStatus() {
+    try {
+      const response = await axios.get(`${API_URL}/status`);
+      setLoading(response.data);
+      setExploreServerError(false);
+    } catch (error) {
+      console.error(error);
+      setExploreServerError(true);
+    }
+  }
 
   function exploreCity(selectedCity) {
 
@@ -86,7 +92,9 @@ function App() {
 
         <Stack gap={3}>
 
-          <CityInput onExplore={exploreCity} onError={setErrorMessage} API_KEY={LOC_API_KEY} />
+          <CityInput onExplore={exploreCity} onError={setErrorMessage} API_KEY={LOC_API_KEY} loading={loading} />
+
+          <ServerStatus showStatus={loading} showError={exploreServerError} />
 
           <LocationInfo location={city} />
 
