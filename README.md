@@ -19,6 +19,8 @@
 
 ### 0.4.0
 
+12-07-2023 7:33pm - Refactor movies component
+
 ### [0.3.0](https://github.com/kaylubh/city-explorer/pull/5)
 
 12-06-2023 9:11pm - Refactor weather API request to handle live data
@@ -117,8 +119,8 @@
 
     Estimate of time needed to complete: 1 hour
     Start time: 6:13pm
-    Finish time:
-    Actual time needed to complete:
+    Finish time: 7:33pm
+    Actual time needed to complete: 1 hour 20 mins
 
 ## Lighthouse Reports
 

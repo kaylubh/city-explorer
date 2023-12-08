@@ -2,25 +2,24 @@
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Carousel from 'react-bootstrap/Carousel';
+// components
+import Movie from './Movie';
 
 function Movies(props) {
 
+  const movies = props.moviesData.map((movie) => 
+    <Carousel.Item key={movie.id}>
+      <Movie movieData={movie} />
+    </Carousel.Item>
+  );
+
   return (
     <>
-      <h3>Movies Related to {props.cityName}</h3>
-      <Row>
-        {props.moviesData.map((movie) =>
-          <Col key={movie.id}>
-            <Card>
-              <Card.Img variant='top' src={movie.imageSrc} alt={movie.title} />
-              <Card.Body>
-                <Card.Title>{movie.title}</Card.Title>
-                <Card.Text>{movie.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        )}
-      </Row>
+      <h3>{props.cityName} Related Movies</h3>
+      <Carousel>
+        {movies}
+      </Carousel>
     </>
   )
 }
