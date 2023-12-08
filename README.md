@@ -9,15 +9,46 @@
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
+### Requirements
+
+For development, you will only need [Node](http://nodejs.org/) installed in your environment.
+Please use the appropriate [Editorconfig](http://editorconfig.org/) plugin for your Editor (not mandatory).
+
+### Install
+
+    git clone https://github.com/kaylubh/city-explorer.git
+    cd city-explorer
+    npm install
+
+### Configure app
+
+Any environment configuration steps.
+
+### Start & watch
+
+    npm run dev
+    npm start
+
+### Simple build for production
+
+    npm run build
+
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+### Languages & tools
+
+- Node.js
+- Vite
+- React
+- React Bootstrap
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-### 0.4.0
+### [0.4.0](https://github.com/kaylubh/city-explorer/pull/6)
 
 12-07-2023 7:33pm - Refactor movies component
 12-07-2023 8:08pm - Add header and footer
@@ -56,6 +87,8 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+- Inspiration and assistance for some features from [Immanuel Shin](https://github.com/ImmanuelShin)
 
 ## Features Time Estimates
 
