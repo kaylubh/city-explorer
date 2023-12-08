@@ -12,7 +12,7 @@ function ServerStatus(props) {
       <Alert show={props.showError} variant='danger'>
         <Alert.Heading>Explore Server Connection Error</Alert.Heading>
         <hr />
-        <p>City results are not available</p>
+        <p>Explore results are not available</p>
       </Alert>
     </>
   )

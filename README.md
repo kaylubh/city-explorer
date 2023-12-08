@@ -48,7 +48,7 @@ Any environment configuration steps.
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-### 0.5.0
+### [0.5.0](https://github.com/kaylubh/city-explorer/pull/7)
 
 12-08-2023 3:25pm - Add server status spinner/alert while server is starting
 12-08-2023 3:47pm - Add error alert if can't connect to server
