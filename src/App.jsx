@@ -25,6 +25,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 function App() {
 
   const [loading, setLoading] = useState(true);
+  const [exploreServerError, setExploreServerError] = useState(false);
   const [city, setCity] = useState({});
   const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
@@ -33,15 +34,6 @@ function App() {
   const [movies, setMovies] = useState();
 
   useEffect(() => {
-    async function ping() {
-      try {
-        const response = await axios.get(`${API_URL}/ping`);
-        console.log(response);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    ping();
     exploreServerStatus();
   }, []);
 
@@ -49,8 +41,10 @@ function App() {
     try {
       const response = await axios.get(`${API_URL}/status`);
       setLoading(response.data);
+      setExploreServerError(false);
     } catch (error) {
       console.error(error);
+      setExploreServerError(true);
     }
   }
 
@@ -100,7 +94,7 @@ function App() {
 
           <CityInput onExplore={exploreCity} onError={setErrorMessage} API_KEY={LOC_API_KEY} loading={loading} />
 
-          <ServerStatus show={loading} />
+          <ServerStatus showStatus={loading} showError={exploreServerError} />
 
           <LocationInfo location={city} />
 
