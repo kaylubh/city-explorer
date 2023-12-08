@@ -20,6 +20,7 @@
 ### 0.4.0
 
 12-07-2023 7:33pm - Refactor movies component
+12-07-2023 8:08pm - Add header and footer
 
 ### [0.3.0](https://github.com/kaylubh/city-explorer/pull/5)
 

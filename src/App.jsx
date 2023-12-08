@@ -9,6 +9,8 @@ import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Stack from 'react-bootstrap/Stack';
 // components
+import Header from './components/Header';
+import Footer from './components/Footer';
 import CityInput from './components/CityInput';
 import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
@@ -64,7 +66,9 @@ function App() {
   }
 
   return (
-    <Container>
+    <Container fluid>
+
+      <Header />
 
       <Stack gap={3} direction='horizontal'>
 
@@ -85,6 +89,8 @@ function App() {
       <Weather location={city} cityName={cityName} weatherData={cityWeather} showError={weatherError} />
 
       <Movies moviesData={movies} cityName={cityName} />
+
+      <Footer />
 
     </Container>
   )
