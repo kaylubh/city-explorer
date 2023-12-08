@@ -138,3 +138,7 @@
 ### Lab 8
 
 ![Lighthouse report, score: 100](/lighthouse/lab8.png)
+
+### Lab 9
+
+![Lighthouse report, score: 100](/lighthouse/lab9.png)
