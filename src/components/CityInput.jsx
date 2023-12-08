@@ -4,14 +4,20 @@
 import axios from 'axios';
 // bootstrap
 import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
 function CityInput(props) {
 
   // const [cities, setCities] = useState({});
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    getCityData();
+  }
+
   async function getCityData() {
-    
+
     const cityNameInput = document.getElementById('inputCityName').value;
 
     try {
@@ -26,18 +32,15 @@ function CityInput(props) {
   }
 
   return (
-    <Form>
-      <Form.Label htmlFor="inputCityName">City Name</Form.Label>
-      <Form.Control
-        type="text"
-        id="inputCityName"
-        aria-describedby="inputCityNameHelpBlock"
-      />
-      <Button variant='primary' onClick={getCityData}>Explore</Button>
-      <Form.Text id="inputCityNameHelpBlock" muted>
-        Enter the name of a city to explore
-      </Form.Text>
-
+    <Form onSubmit={handleSubmit}>
+      <InputGroup>
+        <Form.Control
+          type="text"
+          placeholder='search any city to explore'
+          id="inputCityName"
+        />
+        <Button variant='primary' type='submit'>Explore</Button>
+      </InputGroup>
     </Form>
   )
 }

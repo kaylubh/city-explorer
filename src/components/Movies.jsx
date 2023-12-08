@@ -5,7 +5,7 @@ import Movie from './Movie';
 
 function Movies(props) {
 
-  const movies = props.movieData ? props.moviesData.map((movie) =>
+  const movies = props.moviesData ? props.moviesData.map((movie) =>
     <Carousel.Item key={movie.id}>
       <Movie movieData={movie} />
     </Carousel.Item>

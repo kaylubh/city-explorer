@@ -18,7 +18,7 @@ function Weather(props) {
               <ListGroup.Item>Feels Like: {props.weatherData.feelsTemp}&deg;F</ListGroup.Item>
               <ListGroup.Item>Humidity: {props.weatherData.humidity}%</ListGroup.Item>
               <ListGroup.Item>Cloud Coverage: {props.weatherData.cloudCoverage}%</ListGroup.Item>
-              <ListGroup.Item>Rain: {(props.weatherData.rain)}in/hr</ListGroup.Item>
+              <ListGroup.Item>Rain: {(props.weatherData.rain)} in/hr</ListGroup.Item>
             </ListGroup>
           </Card.Body>
         </Card>
