@@ -26,9 +26,9 @@ function App() {
   const [city, setCity] = useState({});
   const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
-  const [cityWeather, setCityWeather] = useState({});
+  const [cityWeather, setCityWeather] = useState();
   const [weatherError, setWeatherError] = useState(false);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState();
 
   function exploreCity(selectedCity) {
 

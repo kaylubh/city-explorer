@@ -5,19 +5,21 @@ import Movie from './Movie';
 
 function Movies(props) {
 
-  const movies = props.moviesData.map((movie) => 
+  const movies = props.movieData ? props.moviesData.map((movie) =>
     <Carousel.Item key={movie.id}>
       <Movie movieData={movie} />
     </Carousel.Item>
-  );
+  ) : null;
 
   return (
-    <>
-      <h3>{props.cityName} Related Movies</h3>
-      <Carousel>
-        {movies}
-      </Carousel>
-    </>
+    props.moviesData ? (
+      <>
+        <h3>{props.cityName} Related Movies</h3>
+        <Carousel>
+          {movies}
+        </Carousel>
+      </>
+    ) : null
   )
 }
 
