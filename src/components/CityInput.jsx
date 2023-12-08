@@ -6,6 +6,7 @@ import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 function CityInput(props) {
 
@@ -40,6 +41,10 @@ function CityInput(props) {
           id="inputCityName"
         />
         <Button variant='primary' type='submit'>Explore</Button>
+        {props.loading ?
+          <Button variant='primary' disabled>
+            <Spinner size='sm'></Spinner>
+          </Button> : null}
       </InputGroup>
     </Form>
   )
