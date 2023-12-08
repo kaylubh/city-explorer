@@ -2,7 +2,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // react
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // axios
 import axios from 'axios';
 // bootstrap
@@ -29,6 +29,18 @@ function App() {
   const [cityWeather, setCityWeather] = useState();
   const [weatherError, setWeatherError] = useState(false);
   const [movies, setMovies] = useState();
+
+  useEffect(() => {
+    async function ping() {
+      try {
+        const response = await axios.get(`${API_URL}/ping`);
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    ping();
+  }, []);
 
   function exploreCity(selectedCity) {
 
