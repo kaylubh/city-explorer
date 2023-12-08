@@ -2,13 +2,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // react
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // axios
 import axios from 'axios';
 // bootstrap
 import Container from 'react-bootstrap/Container';
 import Stack from 'react-bootstrap/Stack';
 // components
+import Header from './components/Header';
+import Footer from './components/Footer';
 import CityInput from './components/CityInput';
 import LocationInfo from './components/LocationInfo';
 import CityMap from './components/CityMap';
@@ -24,9 +26,21 @@ function App() {
   const [city, setCity] = useState({});
   const [cityName, setCityName] = useState('');
   const [errorMessage, setErrorMessage] = useState({});
-  const [cityWeather, setCityWeather] = useState({});
+  const [cityWeather, setCityWeather] = useState();
   const [weatherError, setWeatherError] = useState(false);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState();
+
+  useEffect(() => {
+    async function ping() {
+      try {
+        const response = await axios.get(`${API_URL}/ping`);
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    ping();
+  }, []);
 
   function exploreCity(selectedCity) {
 
@@ -64,7 +78,9 @@ function App() {
   }
 
   return (
-    <Container>
+    <Container fluid>
+
+      <Header />
 
       <Stack gap={3} direction='horizontal'>
 
@@ -85,6 +101,8 @@ function App() {
       <Weather location={city} cityName={cityName} weatherData={cityWeather} showError={weatherError} />
 
       <Movies moviesData={movies} cityName={cityName} />
+
+      <Footer />
 
     </Container>
   )
